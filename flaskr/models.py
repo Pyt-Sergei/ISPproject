@@ -36,7 +36,6 @@ class Archive(Base):
     user = relationship('User', foreign_keys=user_id)
 
 
-
     def __repr__(self):
         return '<ArchiveID: %r, Archive Path: %r>' % (self.id, self.archive_path)
 

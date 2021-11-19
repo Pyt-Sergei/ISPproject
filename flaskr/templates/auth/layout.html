@@ -15,10 +15,10 @@
             <h1>Flaskr</h1>
             <ul class="reg-log">
                 {% if g.user %}
-                    <li><span>{{ g.user['username'] }}</span>
+                    <li><a href="{{ url_for('site_main.user_page', username=g.user['username']) }}">{{ g.user['username'] }}</a>
                     <li><a href="{{ url_for('site_auth.logout') }}">Log Out</a>
                 {% else %}
-                    <li><a href="{{ url_for('site_main.home') }}">Home</a></li>
+                    <li><a href="{{ url_for('site_main.user_page', username=g.user['username']) }}">{{ g.user['username'] }}</a>
                     <li><a href="{{ url_for('site_auth.register') }}">Register</a></li>
                     <li><a href="{{ url_for('site_auth.login') }}">Log in</a></li>
                 {% endif %}

@@ -23,7 +23,6 @@ def upload(task, tarfile_path, file):
             size += len(chunk)
 
 
-
 """Writing to file 'tarfile_path' from the url by celery worker"""
 def download(task, tarfile_path, url):
     with open(tarfile_path, 'wb') as file:
@@ -36,7 +35,6 @@ def download(task, tarfile_path, url):
             progress = size * 100 // total
             task.update_state(state='DOWNLOADING', meta={'PROGRESS': progress})
             file.write(chunk)
-
 
 
 """Unpacking an archive_path from tarfile_path into archive_path directory by celery worker"""

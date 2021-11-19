@@ -72,14 +72,6 @@ async def get_status():
     return render_template('main/track.html')
 
 
-# @bp.route('/archive/status/<string:archive_id>', methods=('POST',))
-# @login_required
-# async def get_file_status_post(archive_id):
-#     if request.method == 'POST':
-#         task_id = request.form.get('task_id')
-#         return redirect(url_for('.get_file_status', archive_id=task_id))
-
-
 @bp.route('/archive/status/<string:archive_id>', methods=('POST', 'GET'))
 @login_required
 async def get_file_status(archive_id):
