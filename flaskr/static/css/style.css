@@ -196,7 +196,8 @@ hr{
 }
 
 .id-span{
-    max-width: 800px;
+    display: block;
+    word-break:break-all;
 }
 
 .progress-bar__file{
