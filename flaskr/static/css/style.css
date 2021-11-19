@@ -192,6 +192,7 @@ hr{
 
 .progress-bar__item{
     margin: 10px 0;
+    max-width: 800px;
 }
 
 .progress-bar__file{

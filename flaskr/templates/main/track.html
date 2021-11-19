@@ -22,7 +22,9 @@
     {% if response %}
     <div class="progress-bar">
 
-        <div class="progress-bar__item">ID: {{ response['task_id'] }}</div>
+        <div class="progress-bar__item">
+            <span>ID: {{ response['task_id'] }}</span>
+        </div>
 
         {% if response.get('status') %}
         <div class="progress-bar__item">status: {{ response['status'] }}</div><br>
