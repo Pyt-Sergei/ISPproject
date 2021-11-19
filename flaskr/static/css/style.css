@@ -195,6 +195,10 @@ hr{
     max-width: 800px;
 }
 
+.id-span{
+    max-width: 800px;
+}
+
 .progress-bar__file{
     font-style: italic;
     text-decoration: underline;
